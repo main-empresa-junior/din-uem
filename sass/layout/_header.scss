@@ -1,0 +1,52 @@
+header {
+    background: #003366;
+    color: #FFF;
+}
+
+.header-top-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.logo img {
+    max-height: 50px;
+    height: auto;
+    width: auto;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}
+
+.header-sub {
+    padding: 2rem 1.5rem;
+}
+
+.header-sub h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    color: #F5F5F5;
+    font-weight: 400;
+}
+
+header p:last-child {
+    margin-bottom: 3rem;
+}
