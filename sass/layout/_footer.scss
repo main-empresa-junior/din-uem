@@ -1,0 +1,32 @@
+footer {
+    background: #003366;
+    color: #f5f5f5;
+    padding: 1.5rem 0;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.column {
+    flex: 1;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid white;
+    margin: 1rem 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.display_block a {
+    display: block;
+    margin: 4px 0;
+}
