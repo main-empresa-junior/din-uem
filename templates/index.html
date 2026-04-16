@@ -1,16 +1,81 @@
 {% extends "base.html" %}
 
-
-{% block title %}
-
-{% endblock title %}
-
+{% block title %}Início | Din UEM{% endblock title %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{{ get_url(path='/index.css') }}">
+<link rel="stylesheet" href="{{ get_url(path='css/index.css') }}">
 {% endblock extra_css %}
 
-
 {% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Departamento de Informática</h1>
+            <p class="subtitle">Formando profissionais inovadores em Engenharia de Software e Ciência da Computação</p>
+            <div class="hero-actions">
+                <a href="#cursos" class="btn-primary">Explore os Cursos</a>
+                <a href="{{ get_url(path='@/registro/_index.md') }}" class="btn-blue">Criar Conta</a>
+            </div>
+        </div>
+        <div class="hero-logo">
+            <svg viewBox="0 0 220 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 15 L10 95 L48 95 C72 95 90 78 90 55 C90 32 72 15 48 15 Z"
+                      fill="none" stroke="#aaa" stroke-width="7" stroke-linejoin="round"/>
+                <line x1="105" y1="15" x2="105" y2="95" stroke="#aaa" stroke-width="7" stroke-linecap="round"/>
+                <polyline points="122,95 122,15 165,95 165,15"
+                          fill="none" stroke="#aaa" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+                <path d="M5 105 Q110 95 215 105" stroke="#aaa" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </div>
+</section>
 
+<section class="courses" id="cursos">
+    <div class="container">
+        <h2>Nossos Cursos</h2>
+        <p class="section-desc">O Departamento oferece dois programas de bacharelado com excelência acadêmica e infraestrutura moderna para a formação de profissionais qualificados.</p>
+        <div class="course-grid">
+            <div class="course-card">
+                <h3>Bacharelado em Engenharia de Software</h3>
+                <p class="course-coordinator">Coordenador: Prof. Dr. Edson Alves de Oliveira Junior</p>
+                <p class="course-desc">Forma profissionais capacitados para projetar, desenvolver e gerenciar sistemas de software de alta qualidade.</p>
+                <a href="{{ get_url(path='@/cursos/_index.md') }}" class="btn-card">Mais Detalhes</a>
+            </div>
+            <div class="course-card">
+                <h3>Bacharelado em Ciência da Computação</h3>
+                <p class="course-coordinator">Coordenador: Prof. Dr. Nardênio Almeida Martins</p>
+                <p class="course-desc">Prepara cientistas e pesquisadores em computação para atuar em pesquisa, desenvolvimento e inovação tecnológica.</p>
+                <a href="{{ get_url(path='@/cursos/_index.md') }}" class="btn-card">Mais Detalhes</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-section">
+    <div class="container">
+        <h2>Por Que Estudar Conosco</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <span class="why-icon">🎓</span>
+                <h4>Educação de Qualidade</h4>
+                <p>Cursos alinhados com os mais altos padrões internacionais</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">🔬</span>
+                <h4>Pesquisa Ativa</h4>
+                <p>Grupos de pesquisa em IA, Engenharia de Software e Análise de Dados</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">🤝</span>
+                <h4>Conexões Profissionais</h4>
+                <p>Parcerias com a indústria de tecnologia e oportunidades de estágio</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">🏆</span>
+                <h4>Infraestrutura Moderna</h4>
+                <p>Laboratórios equipados com tecnologia de ponta</p>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock content %}
