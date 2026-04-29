@@ -1,16 +1,59 @@
 {% extends "base.html" %}
 
-
-{% block title %}
-
-{% endblock title %}
-
-
-{% block extra_css %}
-<link rel="stylesheet" href="{{ get_url(path='/documentos.css') }}">
-{% endblock extra_css %}
-
+{% block title %}Documentação{% endblock title %}
 
 {% block content %}
+
+<div class="container portal-container">
+
+    <div class="card-row">
+
+        {% for sec in section.extra.sections %}
+
+            <div class="card">
+                <h2>
+                    {% if sec.emoji %}
+                        <span class="emoji">{{ sec.emoji }}</span>
+                    {% endif %}
+                    {{ sec.title }}
+                </h2>
+
+                <div class="card-column">
+
+                    {% for card in sec.cards %}
+                        <div class="card inner-card">
+
+                            {% if card.status %}
+                                <div class="card-tag">
+                                    {{ card.status }}
+                                </div>
+                            {% endif %}
+
+                            <h4>{{ card.title }}</h4>
+                            <p>{{ card.text }}</p>
+
+                        </div>
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+
+    <div class="card banner-card">
+    <h2> Não encontrou o que procura? </h2>
+    <p> Entre em contato com a secretaria do departamento para obter 
+        auxílio com documentação ou informações adicionais.
+    </p>
+    <button class="contact-btn">Fale Conosco</button>
+    </div>
+
+</div>
+
+
 
 {% endblock content %}
