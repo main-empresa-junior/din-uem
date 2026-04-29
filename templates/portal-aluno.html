@@ -3,37 +3,46 @@
 {% block title %}Portal do Aluno{% endblock title %}
 
 {% block content %}
-<div class="container">
+<div class="container content">
+    <!-- Seção Acesso Rápido -->
     <h1>{{ section.extra.acesso_rapido.title }}</h1>
     <p>{{ section.extra.acesso_rapido.subtitle }}</p>
-
     <section class="card-row">
         {% for card in section.extra.acesso_rapido.cards %}
         <div class="card">
             <div class="emoji">{{ card.emoji }}</div>
             <h4>{{ card.title }}</h4>
             <p>{{ card.text }}</p>
-            <a href="{{ card.link }}">{{ card.link_text }} &#x1F852</a>
+            <a href="{{ card.link }}">{{ card.link_text }} &#x1F852;</a>
         </div>
         {% endfor %}
     </section>
 
+    <!-- Seção de Notícias -->
+    <h1>Notícias e Avisos</h1>
+    <p>Mantenha-se atualizado sobre informações importantes</p>
 
-    <h1>{{ section.extra.news.title }}</h1>
-    <p>{{ section.extra.news.subtitle }}</p>
-
+    {% set noticias = get_section(path="portal-aluno/noticias/_index.md") %}
     <section class="card-column">
-        {% for item in section.extra.news.items %}
-        <div class="card">
-            <h3>{{ item.title }}</h3>
-            <span class="tag">{{ item.tag }}</span>
-            <p>{{ item.text }}</p>
-            <span class="card-date">{{ item.date }}</span>
-        </div>
+        {% for noticia in noticias.pages | slice(end=4) %}
+        <a href="{{ noticia.permalink }}" class="card-link">
+            <div class="card noticia-card-horizontal">
+                {% if noticia.extra.imagem %}
+                <div class="noticia-card-img">
+                    <img src="{{ get_url(path=noticia.extra.imagem) }}" alt="{{ noticia.title }}">
+                </div>
+                {% endif %}
+                <div class="noticia-card-body">
+                    <h3 class="card-title">{{ noticia.title }}</h3>
+                    <p>{{ noticia.extra.resumo | default(value="") }}</p>
+                    <span class="card-date">{{ noticia.date | date(format="%d/%m/%Y") }}</span>
+                </div>
+            </div>
+        </a>
         {% endfor %}
     </section>
 
-
+    <!-- Seção de Links -->
     <section class="card-row">
         {% for group in section.extra.links.groups %}
         <div class="card">

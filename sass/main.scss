@@ -1,6 +1,7 @@
 @import "layout/header";
 @import "layout/footer";
 @import "layout/cards";
+@import "layout/noticias";
 
 html, body {
     height: 100%;
@@ -55,13 +56,16 @@ a {
     cursor: pointer;
 }
 
-
-
 .link {
     color: #fff;
     text-decoration: underline;
 }
 
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
 
 /*------------- LISTS ------------*/
 ul {

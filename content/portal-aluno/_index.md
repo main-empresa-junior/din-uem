@@ -47,18 +47,21 @@ title = "Período de Matrícula Aberto"
 tag = "Importante"
 text = "O período de matrícula para o 1º semestre de 2026 está aberto. Acesse o sistema acadêmico para efetuar sua matrícula até 31/01/2025."
 date = "05/01/2026"
+link = "#"
 
 [[extra.news.items]]
 title = "Encerramento de Inscrições - Bolsa de Iniciação Científica"
 tag = "Oportunidade"
 text = "Inscrições abertas para bolsas de iniciação científica. Prazo: 15/03/2026. Edital completo disponível na documentação."
 date = "20/01/2026"
+link = "#"
 
 [[extra.news.items]]
 title = "Atendimento ao Aluno com Horário Estendido"
 tag = "Aviso"
 text = "A secretaria funcionará com horário extendido até 18h durante o período de matrícula. Agende seu atenimento online."
 date = "10/01/2026"
+link = "#"
 
 
 [extra.links]
