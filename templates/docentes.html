@@ -2,15 +2,46 @@
 
 
 {% block title %}
-
+Docentes | Din UEM
 {% endblock title %}
 
 
 {% block extra_css %}
-<link rel="stylesheet" href="{{ get_url(path='/docentes.css') }}">
+<link rel="stylesheet" href="{{ get_url(path='docentes.css') }}">
 {% endblock extra_css %}
 
 
 {% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            Corpo Docente
+        </h1>
+        <p>
+            Conheça nossos professores e pesquisadores de excelência
+        </p>
+    </div>
+</section>
 
+<section class="docentes-section">
+    <div class="docentes-area">
+        <p id="p1">Pesquisadores e Professores</p>
+        <p id="p2">Docentes qualificados e comprometidos com a excelência educacional</p>
+        <div class="docentes-grid">
+            {% for page in section.pages %}
+                <a href=" {{ page.extra.link }} " class="card">
+                    <img src="{{ get_url(path=page.extra.imagem | trim_start_matches(pat='/')) }}" >
+                    <h2 id="nome">{{ page.title }}</h2>
+                    <p id="posicao"> {{ page.extra.status }}</p>
+                    <p id="resumo"> {{ page.extra.resumo }}</p>
+                    <div class="card-content">
+                        <p id="pesquisa">Áreas de Pesquisa:</p>
+                        <p id="p-areas">{{ page.extra.areas}}</p>
+                        <p id="email">{{ page.extra.email }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 {% endblock content %}

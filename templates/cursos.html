@@ -2,15 +2,132 @@
 
 
 {% block title %}
-
+Cursos | Din UEM
 {% endblock title %}
 
-
 {% block extra_css %}
-<link rel="stylesheet" href="{{ get_url(path='/cursos.css') }}">
+<link rel="stylesheet" href="{{ get_url(path='cursos.css') }}">
 {% endblock extra_css %}
 
 
 {% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            Programas de Estudo
+        </h1>
+        <p>
+            Detalhes Completos sobre nossos cursos de graduação
+        </p>
+    </div>
+</section>
 
+<section class="courses-section">
+    <div class="courses-area">
+        <div class="courses-content">
+            <div class="courses-header">
+                <p class="name">Bacharelado em Engenharia de Software</p>
+                <p class="coord">Coordenador: Prof. Dr. Edson Alves de Oliveira Junior</p>
+                <p class="duration">Duração: 5 anos</p>
+            </div>
+            <p class="description">O curso de Engenharia de Software forma profissionais capacitados para projetar, desenvolver, testar e gerenciar sistemas de software
+            de alta qualidade e complexidade.</p>
+            <div class="information-area">
+                <div class="information">
+                    <p>Objetivos do Curso</p>
+                    <ul>
+                        <li>Desenvolver habilidades em análise e design de sistemas</li>
+                        <li>Dominar tecnologias modernas de desenvolvimento</li>
+                        <li>Compreender metodologias ágeis e gerenciamento de projetos</li>
+                        <li>Aplicar práticas de qualidade e testes de software</li>
+                    </ul>
+                </div>
+                <div class="information">
+                    <p>Requisitos de Admissão</p>
+                    <ul>
+                        <li>Diploma de Ensino Médio ou equivalente</li>
+                        <li>Aprovação no processo de seleção (ENEM/Vestibular)</li>
+                        <li>Desempenho mínimo em Matemática e Português</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="courses-content">
+                <div class="courses-header">
+                    <p class="name">Bacharelado em Ciência da Computação</p>
+                    <p class="coord">Coordenador: Prof. Dr. Nardênio Almeida Martins </p>
+                    <p class="duration">Duração: 4 anos</p>
+                </div>
+                <p class="description">O curso de Ciência da Computação prepara cientistas e pesquisadores para atuar em pesquisa, desenvolvimento e inovação, com foco
+                em algoritmos, inteligência artificial e computação teórica.</p>
+                <div class="information-area">
+                    <div class="information">
+                        <p>Objetivos do Curso</p>
+                        <ul>
+                            <li>Entender fundamentos matemáticos e computacionais</li>
+                            <li>Pesquisar em áreas avançadas de computação</li>
+                            <li>Desenvolver soluções inovadoras para problemas complexos</li>
+                            <li>Contribuir para o avanço da computação como disciplina</li>
+                        </ul>
+                    </div>
+                    <div class="information">
+                        <p>Requisitos de Admissão</p>
+                        <ul>
+                            <li>Diploma de Ensino Médio ou equivalente</li>
+                            <li>Aprovação no processo de seleção (ENEM/Vestibular)</li>
+                            <li>Forte base em Matemática</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</section>
+
+<section class="syllabus">
+    <div class="syllabus-area">
+        <h1>Grade Curricular - Engenharia de Software</h1>
+        <p>Demonstração da estrutura curricular dos 5 anos de estudos</p>
+        <div id="syllabus-container">
+            <div class="syllabus-content">
+                <p>1º Semestre</p>
+                <ul>
+                    <li>Introdução à computação</li>
+                    <li>Cálculo I</li>
+                    <li>Álgebra Linear</li>
+                    <li>Prática em Programação I</li>
+                </ul>
+            </div>
+            <div class="syllabus-content">
+                <p>2º Semestre</p>
+                <ul>
+                    <li>Programação Orientada a Objetos</li>
+                    <li>Cálculo II</li>
+                    <li>Física Geral</li>
+                    <li>Estrutura de Dados</li>
+                </ul>
+            </div>
+            <div class="syllabus-content">
+                <p>3º Semestre</p>
+                <ul>
+                    <li>Algoritmos</li>
+                    <li>Engenharia de Software I</li>
+                    <li>Banco de Dados</li>
+                    <li>Sistemas Operacionais</li>
+                </ul>
+            </div>
+            <div class="syllabus-content">
+                <p>4º Semestre</p>
+                <ul>
+                    <li>Engenharia de Software II</li>
+                    <li>Redes de Computadores</li>
+                    <li>Desenvolvimento Web</li>
+                    <li>Projeto Integrador I</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock content %}
