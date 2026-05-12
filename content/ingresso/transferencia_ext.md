@@ -13,7 +13,7 @@ caracteristicas = """
 * Possibilidade de revisão curicular
 """
 requisitos = """
-* Diploma ou comprovante de matrícula de otra IES
+* Diploma ou comprovante de matrícula de outra IES
 * Histórico acadêmico oficial
 * Programa das disciplinas cursadas
 """

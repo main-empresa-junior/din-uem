@@ -1,14 +1,22 @@
-<header>
+<header class="navbar">
     <div class="logo">
-        <a href="{{ get_url(path='@/_index.md') }}">UEM - DIN</a>
+        <a href="{{ get_url(path='') }}">
+            <img
+                src="{{ get_url(path='static/midia/DINlogo.svg') }}"
+                alt="DIN Logo"
+            />
+        </a>
     </div>
-    <nav class="nav-links">
-        <a href="{{ get_url(path='@/_index.md') }}">Início</a>
-        <a href="{{ get_url(path='@/cursos/_index.md') }}">Cursos</a>
-        <a href="{{ get_url(path='@/docentes/_index.md') }}">Docentes</a>
-        <a href="{{ get_url(path='@/documentos/_index.md') }}">Documentação</a>
-        <a href="{{ get_url(path='@/portal-aluno/_index.md') }}">Portal do Aluno</a>
-        <a href="{{ get_url(path='@/portal-docente/_index.md') }}">Portal do Docente</a>
-        <a href="{{ get_url(path='@/ingresso/_index.md') }}">Admissão</a>
-    </nav>
+    <div class="header-container">
+        <p>UEM-DIN</p>
+        <nav class="nav">
+            <a href="/">Início</a>
+            <a href="#">Cursos</a>
+            <a href="#">Docentes</a>
+            <a href="#">Documentação</a>
+            <a href="#">Portal do Aluno</a>
+            <a href="#">Portal do Docente</a>
+            <a href="/">Admissão</a>
+        </nav>
+    </div>
 </header>
