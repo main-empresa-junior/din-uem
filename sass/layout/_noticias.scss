@@ -1,0 +1,230 @@
+// _noticias.scss
+
+// Variável cor laranja (ajuste conforme seu tema)
+$laranja: #ff6600;  // ou var(--laranja-principal) se já existir
+
+// Título decorado (igual ao projetos)
+.title-container {
+    text-align: center;
+    margin: 50px 0;
+}
+.title-badge {
+    background-color: $laranja;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.125);
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.145);
+}
+
+// Coluna de cards (usada no portal e na página de listagem, se houver)
+.coluna-noticias {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+}
+
+.noticia-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    img {
+        width: 280px;
+        object-fit: cover;
+        flex-shrink: 0;
+        border-radius: 15px 0 0 15px;
+    }
+}
+
+.noticia-card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.noticia-card-title {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.noticia-card-data {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.noticia-card-resumo {
+    color: #444;
+    line-height: 1.4;
+    margin: 0;
+}
+
+// Página individual de notícia
+.noticia-container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.noticia-hero {
+    background-color: #e2ebe8;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.noticia-titulo {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.noticia-imagem {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.noticia-data {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.noticia-conteudo {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+// Sidebar
+.noticia-sidebar {
+    background-color: #e2ebe8;
+    padding: 25px;
+    border-radius: 15px;
+    height: fit-content;
+
+    h2 {
+        margin-top: 0;
+        font-size: 1.4rem;
+        border-left: 4px solid $laranja;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+.sidebar-item {
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: translateX(5px);
+    }
+
+    img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+}
+
+.sidebar-item-info {
+    h4 {
+        margin: 0 0 5px 0;
+        font-size: 0.95rem;
+    }
+    span {
+        font-size: 0.75rem;
+        color: #777;
+    }
+}
+
+// Responsivo
+@media (max-width: 768px) {
+    .coluna-noticias {
+        gap: 20px;
+        padding: 10px 20px;
+    }
+
+    .noticia-card {
+        flex-direction: column;
+        img {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px 15px 0 0;
+        }
+    }
+
+    .noticia-card-content {
+        padding: 20px;
+    }
+
+    .noticia-container {
+        grid-template-columns: 1fr;
+    }
+
+    .noticia-titulo {
+        font-size: 1.6rem;
+    }
+}
+
+
+// Card de notícia com imagem à esquerda (usado no portal)
+.noticia-card-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 1.5rem;
+}
+
+.noticia-card-img {
+    flex-shrink: 0;
+    width: 70px;         
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.noticia-card-body {
+    flex: 1;
+    position: relative;   
+}
+

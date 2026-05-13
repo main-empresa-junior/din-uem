@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | Notícias{% endblock %}
+
+{% block content %}
+<div class="noticia-container">
+    <div class="noticia-main">
+        <div class="noticia-hero">
+
+            {% if page.extra.subtitle %}
+            <h1 class="noticia-titulo">{{ page.extra.subtitle }}</h1>
+            {% endif %}
+
+            {% if page.extra.imagem %}
+            <img src="{{ get_url(path=page.extra.imagem) }}" alt="{{ page.title }}" class="noticia-imagem">
+            {% endif %}
+
+            {% if page.date %}
+            <div class="noticia-data">📅 {{ page.date | date(format="%d de %B de %Y") }}</div>
+            {% endif %}
+        </div>
+
+        <div class="noticia-conteudo">
+            {{ page.content | safe }}
+        </div>
+    </div>
+
+<aside class="noticia-sidebar">
+    <h2>Últimas notícias</h2>
+
+    <div class="sidebar-lista">
+        {% set secao_noticias = get_section(path="portal-aluno/noticias/_index.md") %}
+
+        {% for noticia in secao_noticias.pages | slice(end=4) %}
+
+            {% if noticia.permalink != page.permalink %}
+            <a href="{{ noticia.permalink }}" class="sidebar-item">
+
+                {% if noticia.extra.imagem %}
+                <img src="{{ get_url(path=noticia.extra.imagem) }}" alt="{{ noticia.title }}">
+                {% endif %}
+
+                <div class="sidebar-item-info">
+
+                    {% if noticia.extra.subtitle %}
+                        <h4 class="sidebar-title">{{ noticia.extra.subtitle }}</h4>
+                    {% else %}
+                        <h4 class="sidebar-title">{{ noticia.title }}</h4>
+                    {% endif %}
+
+                    {% if noticia.date %}
+                    <span>{{ noticia.date | date(format="%d/%m/%Y") }}</span>
+                    {% endif %}
+
+                </div>
+            </a>
+            {% endif %}
+
+        {% endfor %}
+    </div>
+</aside>
+{% endblock %}

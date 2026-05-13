@@ -3,18 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    {% block title %}
-    Início | Din UEM
-    {% endblock title %}
-  </title>
+<title>
+  {% block title %}Início | Din UEM{% endblock title %}
+</title>
 
   <!-- COLOCAR ATALHO DO ICON DO DIN NESSA TAG ABAIXO -->
   <!-- <link rel="icon" href="{{ get_url(path='Midia/icons/robodin.png') }}" type="image/png"> -->
 
+  <!--
+  <link rel="icon" href="{{ get_url(path='/media/logo_din_preto.png') }}" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="{{ get_url(path='/media/logo_din_branco.png') }}" media="(prefers-color-scheme: dark)">
+  -->
+
+  <link rel="icon" href="{{ get_url(path='media/logo_din_preto.png') }}">
+
+
+  <!--
   <link rel="stylesheet" href="{{ get_url(path='/general/global.css') }}">
-  <link rel="stylesheet" href="{{ get_url(path='css/general/header.css') }}">
+  <link rel="stylesheet" href="{{ get_url(path='/css/general/header.css') }}">
   <link rel="stylesheet" href="{{ get_url(path='css/general/footer.css') }}">
+  <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
+  -->
+
+<link rel="stylesheet" href="{{ get_url(path='main.css') }}">
 
   {% block extra_css %}{% endblock extra_css %}
 
