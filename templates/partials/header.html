@@ -5,15 +5,56 @@
     </div>
 
     <nav>
-        <a href="{{ get_url(path='@/_index.md') }}">Início</a>
-        <a href="{{ get_url(path='@/cursos/_index.md') }}">Cursos</a>
-        <a href="{{ get_url(path='@/docentes/_index.md') }}">Docentes</a>
-        <a href="{{ get_url(path='@/documentos/_index.md') }}">Documentação</a>
-        <a href="{{ get_url(path='@/portal-aluno/_index.md') }}">Portal do Aluno</a>
-        <a href="{{ get_url(path='@/portal-docente/_index.md') }}">Portal do Docente</a>
-        <a href="{{ get_url(path='@/ingresso/_index.md') }}">Admissão</a>
+        <a 
+            href="{{ get_url(path='@/_index.md') }}"
+            class="{% if current_path == '/' %}active{% endif %}"
+        >
+            Início
+        </a>
+
+        <a 
+            href="{{ get_url(path='@/cursos/_index.md') }}"
+            class="{% if current_path is starting_with('/cursos') %}active{% endif %}"
+        >
+            Cursos
+        </a>
+
+        <a 
+            href="{{ get_url(path='@/docentes/_index.md') }}"
+            class="{% if current_path is starting_with('/docentes') %}active{% endif %}"
+        >
+            Docentes
+        </a>
+
+        <a 
+            href="{{ get_url(path='@/documentos/_index.md') }}"
+            class="{% if current_path is starting_with('/documentos') %}active{% endif %}"
+        >
+            Documentação
+        </a>
+
+        <a 
+            href="{{ get_url(path='@/portal-aluno/_index.md') }}"
+            class="{% if current_path is starting_with('/portal-aluno') %}active{% endif %}"
+        >
+            Portal do Aluno
+        </a>
+
+        <a 
+            href="{{ get_url(path='@/portal-docente/_index.md') }}"
+            class="{% if current_path is starting_with('/portal-docente') %}active{% endif %}"
+        >
+            Portal do Docente
+        </a>
+
+        <a 
+            href="{{ get_url(path='@/ingresso/_index.md') }}"
+            class="{% if current_path is starting_with('/ingresso') %}active{% endif %}"
+        >
+            Admissão
+        </a>
     </nav>
-    <div></div>
+
   </div>
 
     <div class="header-sub container">

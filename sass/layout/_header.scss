@@ -24,6 +24,14 @@ nav {
     gap: 1.5rem;
 }
 
+header nav a:hover {
+    color:#F5F5F5;
+}
+
+header nav a.active {
+    color: #F5F5F5;
+}
+
 @media (max-width: 900px) {
     nav {
         display: flex;

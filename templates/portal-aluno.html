@@ -33,9 +33,17 @@
                 </div>
                 {% endif %}
                 <div class="noticia-card-body">
-                    <h3 class="card-title">{{ noticia.title }}</h3>
+
+                    {% if noticia.extra.subtitle %}
+                        <h4 class="card-title">{{ noticia.extra.subtitle }}</h4>
+                    {% else %}
+                        <h4 class="card-title">{{ noticia.title }}</h4>
+                    {% endif %}
+
+
                     <p>{{ noticia.extra.resumo | default(value="") }}</p>
                     <span class="card-date">{{ noticia.date | date(format="%d/%m/%Y") }}</span>
+
                 </div>
             </div>
         </a>

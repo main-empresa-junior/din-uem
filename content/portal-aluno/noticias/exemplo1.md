@@ -1,9 +1,10 @@
 +++
-title = "Aluno da UEM vence hackathon com projeto de IA para diagnosticar doenças"
+title = "Notícias"
 date = 2025-06-08
 template = "noticia.html"
 
 [extra]
+subtitle = "Aluno da UEM vence hackathon com projeto de IA para diagnosticar doenças"
 imagem = "/media/noticias/Nuno.jpg"
 resumo = "Nuno Abilio, de Ciência da Computação, projetou software que reduz tempo e custo de exames"
 +++
