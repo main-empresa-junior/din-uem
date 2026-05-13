@@ -21,18 +21,28 @@
                 <div class="card-column">
 
                     {% for card in sec.cards %}
-                        <div class="card inner-card">
 
-                            {% if card.status %}
-                                <div class="card-tag">
-                                    {{ card.status }}
-                                </div>
-                            {% endif %}
+                        {% if card.link %}
+                        <a href="{{ card.link }}" class="card-link">
+                        {% endif %}
 
-                            <h4>{{ card.title }}</h4>
-                            <p>{{ card.text }}</p>
+                            <div class="card inner-card">
 
-                        </div>
+                                {% if card.status %}
+                                    <div class="card-tag">
+                                        {{ card.status }}
+                                    </div>
+                                {% endif %}
+
+                                <h4>{{ card.title }}</h4>
+                                <p>{{ card.text }}</p>
+
+                            </div>
+
+                        {% if card.link %}
+                        </a>
+                        {% endif %}
+
                     {% endfor %}
 
                 </div>

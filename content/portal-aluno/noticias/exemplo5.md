@@ -1,6 +1,6 @@
 +++
 title = "Exemplo 5"
-date = 2026-04-22
+date = 2024-04-22
 template = "noticia.html"
 
 [extra]
