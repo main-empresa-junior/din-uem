@@ -1,0 +1,82 @@
+.main-footer {
+    background: var(--primary-blue);
+    color: white;
+    padding: 50px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 40px;
+}
+
+.main-footer h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 16px;
+    padding: 0;
+    border: none;
+    display: block;
+}
+
+.footer-brand-desc {
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.footer-contact-info {
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.main-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-footer ul li { margin-bottom: 9px; }
+
+.main-footer a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.main-footer a:hover { color: white; }
+
+.footer-login-btn {
+    display: inline-block;
+    margin-top: 12px;
+    background: rgba(255,255,255,0.1);
+    color: white !important;
+    padding: 7px 18px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: background 0.2s;
+}
+
+.footer-login-btn:hover {
+    background: rgba(255,255,255,0.2) !important;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 16px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+}
+
+@media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+}

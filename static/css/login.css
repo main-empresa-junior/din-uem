@@ -1,0 +1,108 @@
+/* ─── FORMS (login e registro) ─────────────────────── */
+.form-section {
+    background: var(--bg-light);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.form-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid var(--border);
+}
+
+.form-card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 4px;
+}
+
+.form-card-sub {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 0 0 26px;
+}
+
+.form-group { margin-bottom: 16px; }
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px 13px;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--text-dark);
+    background: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(0,74,153,0.1);
+}
+
+.form-group input::placeholder { color: #bbb; }
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.btn-submit {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background: var(--accent-blue);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+    margin-top: 4px;
+}
+
+.btn-submit:hover { background: var(--mid-blue); }
+
+.form-footer-text {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 18px;
+    color: var(--text-muted);
+}
+
+.form-footer-text a {
+    color: var(--accent-blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-footer-text a:hover { text-decoration: underline; }
+
+@media (max-width: 480px) {
+    .form-card { padding: 28px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+}

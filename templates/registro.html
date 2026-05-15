@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Criar Conta | Din UEM{% endblock title %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ get_url(path='css/login.css') }}">
+<link rel="stylesheet" href="{{ get_url(path='css/registro.css') }}">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="form-section">
+    <div class="form-card">
+        <h2>Criar Conta</h2>
+        <p class="form-card-sub">Preencha os dados abaixo para criar seu acesso</p>
+        <form method="post" action="/registro">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail Institucional</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@uem.br"
+                       pattern="[a-zA-Z0-9._%+\-]+@uem\.br$"
+                       title="Use seu e-mail institucional @uem.br"
+                       required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="ra">RA / Registro</label>
+                    <input type="text" id="ra" name="ra" placeholder="00000-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="perfil">Perfil</label>
+                    <select id="perfil" name="perfil" required>
+                        <option value="">Selecione...</option>
+                        <option value="aluno">Aluno</option>
+                        <option value="docente">Docente</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres"
+                       minlength="8"
+                       title="A senha deve ter pelo menos 8 caracteres"
+                       required>
+            </div>
+            <button type="submit" class="btn-submit">Finalizar Cadastro</button>
+        </form>
+        <p class="form-footer-text">Já tem conta? <a href="{{ get_url(path='@/login/_index.md') }}">Faça login aqui</a></p>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,251 @@
+.courses-section {
+    display: flex;
+    width: 100%;
+    padding: 5rem 25.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--bg-light);
+}
+
+.courses-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+    align-self: stretch;
+}
+
+.courses-content {
+    display: flex;
+    padding: 2rem 2rem 3.5rem 2.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+    border-radius: 6px;
+    border-left: 4px solid #E0E0E0;
+    background: #FFF;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+}
+
+.courses-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+
+    .name {
+        align-self: stretch;
+        color: #1A1A1A;
+        font-size: 1.875rem;
+        font-weight: 600;
+        line-height: 2.25rem;
+        margin: 0;
+    }
+
+    .coord {
+        align-self: stretch;
+        color: #06C;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        margin: 0;
+    }
+
+    .duration {
+        color: #666;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        margin: 0;
+    }
+}
+
+.description {
+    align-self: stretch;
+    color: #666;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+}
+
+.information-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    align-self: stretch;
+}
+
+.information {
+    display: flex;
+    flex: 1 1 20rem;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+
+    p {
+        align-self: stretch;
+        color: #1A1A1A;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.75rem;
+        margin: 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        align-self: stretch;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            align-self: stretch;
+            color: #666;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            margin: 0;
+        }
+
+        li::before {
+            content: "✓";
+            color: #06C;
+            font-weight: 700;
+        }
+    }
+}
+
+.syllabus {
+    display: flex;
+    width: 100%;
+    padding: 5rem 24rem;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #FFF;
+}
+
+.syllabus-area {
+    display: flex;
+    max-width: 72rem;
+    padding: 0 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+
+    h1 {
+        align-self: stretch;
+        color: #1A1A1A;
+        font-size: 2.25rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+        margin: 0;
+    }
+
+    p {
+        align-self: stretch;
+        color: #666;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        margin: 0;
+    }
+
+    #syllabus-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-self: stretch;
+        gap: 2rem;
+    }
+}
+
+.syllabus-content {
+    display: flex;
+    flex: 1 1 28rem;
+    max-width: 100%;
+    padding: 1.75rem 1.5rem 1.5rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    border-radius: 6px;
+    border-top: 4px solid #E0E0E0;
+    background: #F5F5F5;
+
+    p {
+        align-self: stretch;
+        color: #1A1A1A;
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.75rem;
+        margin: 0;
+    }
+
+    ul {
+        display: flex;
+        gap: 0.75rem;
+        align-self: stretch;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 0;
+        padding-left: 1rem;
+
+        li {
+            color: #666;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            margin: 0;
+        }
+
+        li::marker {
+            color: #06C;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .courses-section {
+        padding: 4rem 6rem;
+    }
+
+    .courses-header .name {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .syllabus {
+        padding: 4rem 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-section {
+        padding: 3rem 2rem;
+    }
+
+    .courses-header .name {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    .syllabus {
+        padding: 3rem 2rem;
+    }
+
+    .syllabus-area h1 {
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+}
