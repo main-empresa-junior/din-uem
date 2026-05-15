@@ -1,9 +1,8 @@
+@use "hero";
 @import "layout/header";
 @import "layout/footer";
 @import "layout/cards";
 @import "layout/noticias";
-@use "hero";
-
 
 :root {
     --primary-blue: #003366;
