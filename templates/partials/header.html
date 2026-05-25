@@ -1,15 +1,50 @@
 <header>
-    <div class="logo">
-        <img src="{{ get_url(path='midia/DINlogo.svg') }}" alt="DIN - UEM">
+    <div class="header-top-grid">
+        <div class="logo">
+            <img
+                src="{{ get_url(path='media/logo_uem_branco.png') }}"
+                alt="UEM"
+            />
+        </div>
+
+        <nav>
+            <a href="{{ get_url(path='@/_index.md') }}">Início</a>
+            <a href="{{ get_url(path='@/cursos/_index.md') }}">Cursos</a>
+            <a href="{{ get_url(path='@/docentes/_index.md') }}">Docentes</a>
+            <a href="{{ get_url(path='@/documentos/_index.md') }}"
+                >Documentação</a
+            >
+            <a href="{{ get_url(path='@/portal-aluno/_index.md') }}"
+                >Portal do Aluno</a
+            >
+            <a href="{{ get_url(path='@/portal-docente/_index.md') }}"
+                >Portal do Docente</a
+            >
+            <a href="{{ get_url(path='@/ingresso/_index.md') }}">Admissão</a>
+        </nav>
+        <div></div>
+    </div>
+
+    <div class="header-sub container">
+        <h1>{{ section.title | default(value=page.title) }}</h1>
+
+        {% if section and section.extra.header_subtitle %}
+        <p>{{ section.extra.header_subtitle }}</p>
+        {% elif page and page.extra.header_subtitle %}
+        <p>{{ page.extra.header_subtitle }}</p>
+        {% endif %}
     </div>
     <nav class="nav-links">
         <a href="{{ get_url(path='@/_index.md') }}">Início</a>
         <a href="{{ get_url(path='@/cursos/_index.md') }}">Cursos</a>
         <a href="{{ get_url(path='@/docentes/_index.md') }}">Docentes</a>
         <a href="{{ get_url(path='@/documentos/_index.md') }}">Documentação</a>
-        <a href="{{ get_url(path='@/portal-aluno/_index.md') }}">Portal do Aluno</a>
-        <a href="{{ get_url(path='@/portal-docente/_index.md') }}">Portal do Docente</a>
+        <a href="{{ get_url(path='@/portal-aluno/_index.md') }}"
+            >Portal do Aluno</a
+        >
+        <a href="{{ get_url(path='@/portal-docente/_index.md') }}"
+            >Portal do Docente</a
+        >
         <a href="{{ get_url(path='@/ingresso/_index.md') }}">Admissão</a>
     </nav>
 </header>
-
