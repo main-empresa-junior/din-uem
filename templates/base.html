@@ -1,31 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    {% block title %}
-    Início | Din UEM
-    {% endblock title %}
-  </title>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %} Início | Din UEM {% endblock title %}</title>
 
-  <!-- COLOCAR ATALHO DO ICON DO DIN NESSA TAG ABAIXO -->
-  <!-- <link rel="icon" href="{{ get_url(path='Midia/icons/robodin.png') }}" type="image/png"> -->
+        <link
+            rel="icon"
+            href="{{ get_url(path='midia/DINlogo.svg') }}"
+            type="image/svg+xml"
+        />
 
-  <link rel="stylesheet" href="{{ get_url(path='main.css')}}">
-  <link rel="stylesheet" href="{{ get_url(path='css/general/header.css') }}">
-  <link rel="stylesheet" href="{{ get_url(path='css/general/footer.css') }}">
+        <link
+            rel="stylesheet"
+            href="{{ get_url(path='main.css') }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ get_url(path='css/general/header.css') }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ get_url(path='css/general/footer.css') }}"
+        />
 
-  {% block extra_css %}{% endblock extra_css %}
+        {% block extra_css %}{% endblock extra_css %}
+    </head>
+    <body>
+        {% include "partials/header.html" %}
 
-</head>
-<body>
-    {% include "partials/header.html" %}
+        <main>{% block content %}{% endblock content %}</main>
 
-    <main>
-        {% block content %}{% endblock content %}
-    </main>
-
-    {% include "partials/footer.html" %}
-</body>
+        {% include "partials/footer.html" %}
+    </body>
 </html>

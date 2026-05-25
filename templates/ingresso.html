@@ -1,7 +1,8 @@
 {% extends "base.html" %} {% block title %} Ingresso | DIN-UEM {% endblock title
 %} {% block extra_css %}
-<link rel="stylesheet" href="{{ get_url(path='/ingresso.scss') }}" />
-{% endblock extra_css %} {% block content %}
+<link rel="stylesheet" href="{{ get_url(path='ingresso.css') }}" />
+{% endblock extra_css %} 
+{% block content %}
 <section class="hero" style="background-color: #003366">
     <div class="hero-content">
         <h1>Processo de Admissão</h1>
@@ -14,21 +15,24 @@
 <section class="admission-section">
     <div class="grid-cards">
         {% for page in section.pages %}
-        <div class="card-content">
+        <div class="card">
             <h3 class="card-title">{{ page.title }}</h3>
             <p>{{ page.description }}</p>
-            <div class="card-character">
-                <strong>Características:</strong>
-                <div class="dots">{{page.extra.caracteristicas}}</div>
-            </div>
-            <div class="card-requirements">
-                <strong>Requisitos:</strong>
-                <div class="chacks">{{page.extra.requisitos}}</div>
-            </div>
-            <div class="data-block">
-                <strong class="prazo">Prazo:</strong>
-                <div class="data">{{page.extra.prazo}}</div>
-                <div class="button">Acessar Edital UEM</div>
+            <div class="card-content">
+                <div class="card-character">
+                    <strong>Características:</strong>
+                    <div class="dots">{{page.extra.caracteristicas}}</div>
+                </div>
+                <div class="card-require">
+                    <strong>Requisitos:</strong>
+                    <div class="checks">{{page.extra.requisitos}}</div>
+                </div>
+           
+                <div class="data-block">
+                    <strong class="prazo">Prazo:</strong>
+                    <div class="data">{{page.extra.prazo}}</div>
+                    <div class="button">Acessar Edital UEM</div>
+                </div>
             </div>
         </div>
         {% endfor %}
