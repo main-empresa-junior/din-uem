@@ -1,16 +1,32 @@
 {% extends "base.html" %}
 
-
-{% block title %}
-
-{% endblock title %}
-
+{% block title %}Programas de Estudo | Din UEM{% endblock title %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{{ get_url(path='/cursos.css') }}">
+<link rel="stylesheet" href="{{ get_url(path='cursos.css') }}">
 {% endblock extra_css %}
 
-
 {% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Programas de Estudo</h1>
+        <p>Conheça os cursos de graduação do Departamento de Informática</p>
+    </div>
+</section>
 
+<section class="courses-section">
+    <div class="courses-area">
+        {% for page in section.pages %}
+        <a href="{{ page.permalink }}" class="courses-content">
+            <div class="courses-header">
+                <p class="name">{{ page.title }}</p>
+                <p class="coord">{{ page.extra.coordenador }}</p>
+                <p class="duration">Duração: {{ page.extra.duracao }}</p>
+            </div>
+            <p class="description">{{ page.description }}</p>
+            <span class="btn-ver-mais">Saiba mais sobre o curso →</span>
+        </a>
+        {% endfor %}
+    </div>
+</section>
 {% endblock content %}

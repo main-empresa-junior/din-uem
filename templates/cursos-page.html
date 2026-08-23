@@ -1,16 +1,41 @@
 {% extends "base.html" %}
 
-
-{% block title %}
-
-{% endblock title %}
-
+{% block title %}{{ page.title }} | Din UEM{% endblock title %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{{ get_url(path='/cursos.css') }}">
+<link rel="stylesheet" href="{{ get_url(path='cursos.css') }}">
 {% endblock extra_css %}
 
-
 {% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.description }}</p>
+    </div>
+</section>
 
+<section class="courses-section">
+    <div class="courses-area">
+        <div class="courses-content">
+            <div class="courses-header">
+                <p class="coord">{{ page.extra.coordenador }}</p>
+                <p class="duration">Duração: {{ page.extra.duracao }}</p>
+            </div>
+
+            <div class="page-body">
+                {{ page.content | safe }}
+            </div>
+
+            {% if page.extra.link_grade %}
+            <a href="{{ page.extra.link_grade }}" target="_blank" class="btn-grade">
+                Ver Grade Curricular Oficial →
+            </a>
+            {% endif %}
+        </div>
+
+        <a href="{{ get_url(path='@/cursos/_index.md') }}" class="btn-voltar">
+            ← Voltar para a lista de cursos
+        </a>
+    </div>
+</section>
 {% endblock content %}
